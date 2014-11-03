@@ -1,0 +1,13 @@
+<nav>
+	<h1 class="brand"><%= link_to 'InfoLab', '/' %></h1>
+	<ul id="main-navigation" class="navigation">
+		<li class=<%= check_if_active('') %>><%= link_to 'Home', '/index.html' %></li>
+		<li class=<%= check_if_active('research') %>><%= link_to 'Research', '/research.html' %></li>
+		<li class=<%= check_if_active('people') %>><%= link_to 'People', '/people.html' %></li>
+		<li class=<%= check_if_active('projects') %>><%= link_to 'Projects', '/projects.html' %></li>
+		<li class=<%= check_if_active('publications') %>><%= link_to 'Publications', '/publications.html' %></li>
+		<li class=<%= check_if_active('about') %>><%= link_to 'About', '/about.html' %></li>
+	</ul>
+	<span class="menu-icon"><a href="#main-navigation" class="open-menu">☰</a><a href="#" class="close-menu">☰</a></span>
+</nav>
+

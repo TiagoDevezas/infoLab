@@ -1,0 +1,19 @@
+section.content {
+	@include clearfix;
+	@include media($medium-screen-up) {
+		@include span-columns(9);
+		padding-left: 2em;
+		//padding-top: 1.5em;
+	}
+	h1 {
+		font-size: 2em;
+		color: $dark-gray;
+		margin-bottom: 0.3em;
+	}
+	h2 {
+		margin-bottom: 0.5em;
+	}
+	p:last-child {
+		margin-bottom: 0;
+	}
+}

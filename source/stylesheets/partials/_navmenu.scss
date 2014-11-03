@@ -1,0 +1,87 @@
+nav {
+	@include media($medium-screen-up) {
+		@include span-columns(3);
+	}
+	.brand {
+		display: block;
+		padding-bottom: 0.2em;
+		margin: 0;
+		border-bottom: 1px solid $light-gray;
+		color: darken($medium-gray, 20);
+		font-size: 2em;
+		a {
+			color: darken($medium-gray, 20);
+			&:hover, &:focus {
+				color: darken($base-accent-color, 25);
+			}
+		}
+		@include media($medium-screen-up) {
+			text-align: right;
+		}
+	}
+	ul {
+		height: 0;
+		overflow: hidden;
+		text-align: center;
+		border: 1px solid $light-gray;
+		border-top: 0;
+		margin-bottom: 1em;
+		@include media($medium-screen-up) {
+			float: right;
+			text-align: right;
+			border: 0;
+			height: 100%;
+		}
+		li {
+			&:first-child {
+				border: 0;
+			}
+			&.active a {
+				color: darken($base-accent-color, 25);
+				@include media($medium-screen-up) {
+					&:before {
+						content: "// ";
+						color: $dark-gray;
+					}
+				}
+			}
+			border-top: 1px solid $light-gray;
+			@include media($medium-screen-up) {
+				border: 0;
+			}
+			a {
+				display: block;
+				padding: 0.5em 0;
+				text-transform: uppercase;
+				color: $medium-gray;
+			}
+
+		}
+	}
+	.menu-icon a {
+		position: absolute;
+		right: 0.5em;
+		top: 0;
+		font-size: 2em;
+		@include media($medium-screen-up) {
+			display: none;
+		}
+	}
+	.close-menu {
+		display: none;
+	}
+	#main-navigation:target {
+		height: 100%;
+	}
+	#main-navigation:target + .menu-icon {
+		.open-menu {
+			display: none;
+		}
+		.close-menu {
+			display: block;
+		}
+	}
+	.navigation {
+		transition: height 0.3s ease; 
+	}
+}

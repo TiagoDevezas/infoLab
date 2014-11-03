@@ -1,0 +1,10 @@
+.main {
+	@include outer-container;
+	padding: 0 1em;
+	@include media($medium-screen-up) {
+		padding-top: 2.5em;
+	}
+	.main-content {
+		@include span-columns(12);
+	}
+}
