@@ -1,6 +1,7 @@
 nav {
 	@include media($medium-screen-up) {
 		@include span-columns(3);
+		margin-top: 4.5em;
 	}
 	.brand {
 		display: block;
@@ -20,7 +21,7 @@ nav {
 		}
 	}
 	ul {
-		height: 0;
+		max-height: 0;
 		overflow: hidden;
 		text-align: center;
 		border: 1px solid $light-gray;
@@ -30,7 +31,7 @@ nav {
 			float: right;
 			text-align: right;
 			border: 0;
-			height: 100%;
+			max-height: 100%;
 		}
 		li {
 			&:first-child {
@@ -71,7 +72,7 @@ nav {
 		display: none;
 	}
 	#main-navigation:target {
-		height: 100%;
+		max-height: 500px;
 	}
 	#main-navigation:target + .menu-icon {
 		.open-menu {
@@ -81,7 +82,7 @@ nav {
 			display: block;
 		}
 	}
-	.navigation {
-		transition: height 0.3s ease; 
+	#main-navigation {
+		transition: max-height 0.3s ease; 
 	}
 }

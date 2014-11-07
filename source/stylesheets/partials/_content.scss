@@ -3,15 +3,25 @@ section.content {
 	@include media($medium-screen-up) {
 		@include span-columns(9);
 		padding-left: 2em;
-		//padding-top: 1.5em;
+		margin-top: 7.3em;
 	}
 	h1 {
 		font-size: 2em;
+		font-family: $sans-serif;
 		color: $dark-gray;
-		margin-bottom: 0.3em;
+		margin-bottom: 0;
+		//padding-bottom: 0.3em;
+		font-weight: 400;
+		//margin-bottom: 0.3em;
+		& + p {
+			margin-top: 0.8em;
+		}
+		& + h2 {
+			margin-top: 0.15em;
+		}
 	}
 	h2 {
-		margin-bottom: 0.5em;
+		margin-bottom: 0.7em;
 	}
 	p:last-child {
 		margin-bottom: 0;
