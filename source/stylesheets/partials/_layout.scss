@@ -10,11 +10,12 @@ body {
 .main {
 	@include outer-container;
 	padding: 0 1em;
+	padding-top: 5em;
 	min-height: 100%;
 	margin-bottom: -3.5em;
-	// @include media($medium-screen-up) {
-	// 	padding-top: 2.5em;
-	// }
+	@include media($medium-screen-up) {
+		padding-top: 2.5em;
+	}
 	.main-content {
 		@include span-columns(12);
 		min-height: 100%;
