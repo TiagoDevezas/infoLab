@@ -40,7 +40,7 @@ h1 {
 
 h2 {
   font-family: $serif;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: 400;
   line-height: 1.3em;
   margin-bottom: .4em;
@@ -48,9 +48,9 @@ h2 {
 
 h3 {
   font-family: $serif;
-  font-size: 1.4em;
+  font-size: 1.3em;
   font-weight: 400;
-  line-height: 1.4em;
+  line-height: 1.3em;
   margin-bottom: .4em;
 
   // @include media($medium-screen) {
@@ -64,7 +64,7 @@ h3 {
 
 h4 {
   //font-size: $h4-font-size;
-  font-size: 1.25em;
+  font-size: 1.2em;
 }
 
 h5 {
@@ -88,13 +88,17 @@ p.date {
 
 p {
   font-family: $sans-serif;
-  line-height: 1.5em;
-  font-size: 1.1em;
-  margin-bottom: 1em;
+  line-height: 1.4em;
+  font-size: 1.05em;
+  margin-bottom: 0.9em;
 }
 
 p.author {
   font-family: $sans-serif;
+}
+
+#index p {
+  font-size: 1.1em;
 }
 
 

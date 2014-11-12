@@ -62,8 +62,16 @@ nav {
 	.menu-icon a {
 		position: absolute;
 		right: 0.5em;
-		top: 0;
+		top: 0.35em;
 		font-size: 2em;
+		padding: 0.45em 0.45em 0.4em 0.4em;
+		line-height: 1;
+		border-radius: 50%;
+		background-color: rgba($dark-gray, 0.9);
+		color: darken($base-accent-color, 25);
+		&:hover, &:focus {
+			color: $light-gray;
+		}
 		@include media($medium-screen-up) {
 			display: none;
 		}
