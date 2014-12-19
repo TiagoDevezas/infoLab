@@ -37,7 +37,7 @@ nav {
 			&:first-child {
 				border: 0;
 			}
-			&.active a {
+			&.active a, .current a {
 				color: darken($base-accent-color, 25);
 				@include media($medium-screen-up) {
 					&:before {
