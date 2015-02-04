@@ -34,10 +34,16 @@ nav {
 			max-height: 100%;
 		}
 		li {
+			a {
+				display: block;
+				padding: 0.5em 0;
+				text-transform: uppercase;
+				color: $medium-gray;
+			}
 			&:first-child {
 				border: 0;
 			}
-			&.active a, .current a {
+			&.current a {
 				color: darken($base-accent-color, 25);
 				@include media($medium-screen-up) {
 					&:before {
@@ -46,17 +52,43 @@ nav {
 					}
 				}
 			}
+			&.closed a {
+				&:before {
+					content: "▸ ";
+					color: $dark-gray;
+				}
+			}
+			&.open {
+				a {
+					&:before {
+						content: "▾ ";
+						color: $dark-gray;
+					}			
+				}
+				ul > li {
+					a {
+						margin-top: -10px;
+						font-size: 0.9em;
+						color: $medium-gray;
+						&:before {
+							content: "";
+						}						
+					}
+					&.current a {
+						color: darken($base-accent-color, 25);
+						@include media($medium-screen-up) {
+							&:before {
+								content: "// ";
+								color: $dark-gray;
+							}
+						}	
+					}
+				}
+			}
 			border-top: 1px solid $light-gray;
 			@include media($medium-screen-up) {
 				border: 0;
 			}
-			a {
-				display: block;
-				padding: 0.5em 0;
-				text-transform: uppercase;
-				color: $medium-gray;
-			}
-
 		}
 	}
 	.menu-icon a {
