@@ -4,7 +4,7 @@ html, body {
 
 body {
 	background-image: url('https://raw.githubusercontent.com/TiagoDevezas/infoLab/master/source/images/bg.png');
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 }
 
 .main {
@@ -19,6 +19,6 @@ body {
 	.main-content {
 		@include span-columns(12);
 		min-height: 100%;
-		padding-bottom: 1.5em;
+		padding-bottom: 2.5em;
 	}
 }
